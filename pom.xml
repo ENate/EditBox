@@ -1,117 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-	<groupId>pm.eclipse.editbox</groupId>
-	<artifactId>pm.eclipse.editbox.parent</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
-	<packaging>pom</packaging>
-	<name>EditBox (parent)</name>
+  <groupId>pm.eclipse.editbox</groupId>
+  <artifactId>pm.eclipse.editbox.parent</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>EditBox (parent)</name>
 
-	<developers>
-		<developer>
-			<id>mentos13</id>
-			<name>Piotr Metel</name>
-			<email></email>
-			<organization></organization>
-			<roles>
-				<role>Author</role>
-			</roles>
-			<timezone>+1</timezone>
-		</developer>
-	</developers>
-	<contributors>
-		<contributor>
-			<name>Paul Verest</name>
-			<organization>Nodeclipse organization</organization>
-			<organizationUrl>https://nodeclipse.github.io/</organizationUrl>
-			<timezone>+8</timezone>
-		</contributor>
-	</contributors>
+  <developers>
+    <developer>
+      <id>mentos13</id>
+      <name>Piotr Metel</name>
+      <email></email>
+      <organization></organization>
+      <roles>
+        <role>Author</role>
+      </roles>
+      <timezone>+1</timezone>
+    </developer>
+  </developers>
+  <contributors>
+    <contributor>
+      <name>Paul Verest</name>
+      <organization>Nodeclipse organization</organization>
+      <organizationUrl>https://nodeclipse.github.io/</organizationUrl>
+      <timezone>+8</timezone>
+    </contributor>
+  </contributors>
 
-	<prerequisites>
-		<maven>3.0</maven>
-	</prerequisites>
+  <prerequisites>
+    <maven>3.0</maven>
+  </prerequisites>
 
-	<properties>
-		<tycho-version>1.1.0</tycho-version>
+  <properties>
+    <tycho-version>4.0.7</tycho-version>
 
-		<!-- PROJECT SETTINGS -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-	</properties>
+    <!-- PROJECT SETTINGS -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
 
 
-	<modules>
-		<module>pm.eclipse.editbox</module>
-		<module>pm.eclipse.editbox.feature</module>
-		<module>pm.eclipse.editbox.site</module>
-	</modules>
+  <modules>
+    <module>pm.eclipse.editbox</module>
+    <module>pm.eclipse.editbox.feature</module>
+    <module>pm.eclipse.editbox.site</module>
+  </modules>
 
-	<repositories>
-		<repository>
-			<id>kepler</id>
-			<layout>p2</layout>
-			<url>http://download.eclipse.org/releases/kepler</url>
-		</repository>
-		 
-	</repositories>
+  <repositories>
+    <repository>
+      <id>kepler</id>
+      <layout>p2</layout>
+      <url>http://download.eclipse.org/releases/kepler</url>
+    </repository>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-maven-plugin</artifactId>
-				<version>${tycho-version}</version>
-				<extensions>true</extensions>
-			</plugin>
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-compiler-plugin</artifactId>
-				<version>${tycho-version}</version>
-				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>target-platform-configuration</artifactId>
-				<version>${tycho-version}</version>
-				<configuration>
-					<environments>
-						<environment>
-							<os>linux</os>
-							<ws>gtk</ws>
-							<arch>x86</arch>
-						</environment>
-						<environment>
-							<os>linux</os>
-							<ws>gtk</ws>
-							<arch>x86_64</arch>
-						</environment>
-						<environment>
-							<os>win32</os>
-							<ws>win32</ws>
-							<arch>x86</arch>
-						</environment>
-						<environment>
-							<os>win32</os>
-							<ws>win32</ws>
-							<arch>x86_64</arch>
-						</environment>
-						<environment>
-							<os>macosx</os>
-							<ws>cocoa</ws>
-							<arch>x86_64</arch>
-						</environment>
-					</environments>
-				</configuration>
-			</plugin>
-			
-		</plugins>
-	</build>
+  </repositories>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <extensions>true</extensions>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-compiler-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <configuration>
+          <source>21</source>
+          <target>21</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>target-platform-configuration</artifactId>
+        <version>${tycho-version}</version>
+        <configuration>
+          <environments>
+            <environment>
+              <os>linux</os>
+              <ws>gtk</ws>
+              <arch>x86</arch>
+            </environment>
+            <environment>
+              <os>linux</os>
+              <ws>gtk</ws>
+              <arch>x86_64</arch>
+            </environment>
+            <environment>
+              <os>win32</os>
+              <ws>win32</ws>
+              <arch>x86</arch>
+            </environment>
+            <environment>
+              <os>win32</os>
+              <ws>win32</ws>
+              <arch>x86_64</arch>
+            </environment>
+            <environment>
+              <os>macosx</os>
+              <ws>cocoa</ws>
+              <arch>x86_64</arch>
+            </environment>
+          </environments>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
 
 
 </project>
