@@ -5,4 +5,13 @@ target
 .*.html
 .project
 .settings
+./pm.eclipse.editbox.site/target 
+./pm.eclipse.editbox.bin
+./pm.eclipse.editbox.settings
+./pm.eclipse.editbox.target
+
+./pm.eclipse.editbox.feature/.settings
+./pm.eclipse.editbox.feature/target
+./pm.eclipse.editbox.feature/.settings
+./pm.eclipse.editbox.feature/target
 
